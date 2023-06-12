@@ -1,0 +1,117 @@
+@use "../../tools/partials/mixins" as*;
+@use "../../tools/partials/variables" as*;
+
+.socials {
+    &Listitems {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 2px solid teal;
+        margin-bottom: .5rem;
+
+    }
+
+    &Image {
+        width: 40px;
+
+        &:first-child {
+            height: 45px
+        }
+
+        margin-right: .5rem;
+
+    }
+    &__list{
+        text-align: center;
+        @include tablet{
+            margin-left: 1rem;
+        }
+        
+    }
+}
+
+body {
+    font-family: website;
+}
+
+.katiePic {
+    min-height: 500px;
+    max-height: 880px;
+    display: block;
+    border-radius: 8px;
+    @include mobile{
+        height: 700px;
+    }
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.listPoints {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.7;
+
+    @include mobile {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+.section {
+    &Name {
+        font-size: 1.15rem;
+        @include mobile {
+            width: 100%;
+            margin: 0;
+        }
+
+        &:first-child {
+            @include tablet {
+                margin-right: 4rem;
+                margin-bottom: 1rem;
+
+                @include mobile {
+                    width: 45%;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+section{
+    @include tablet{
+        max-width: 900px;
+    }
+    @include desktop{
+        max-width: 1280px;
+    }
+    margin: 0 auto;
+}
+#socials{
+    width: 100%;
+    padding: 0;
+    @include mobile {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+ul{
+    padding: 0;
+    list-style-position: inside;
+    
+}
