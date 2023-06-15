@@ -36,7 +36,7 @@ function NavBarMobile() {
     return (
         <div className={`navbarMobile${visible ? 'Visible' : 'Hidden'}`}>
             <div className=' navbarMobile__line1'>
-                <h2 className='navbar__header'>Katie Krukoff</h2>
+                <Link to = '/'><h2 className='navbar__header'>Katie Krukoff</h2></Link>
                 <img className='navbar__image'
                     src={expanded ? closeIcon : burgerMenu}
                     onClick={() => { setExpanded(!expanded) }}
